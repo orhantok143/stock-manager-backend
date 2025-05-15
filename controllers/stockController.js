@@ -12,9 +12,7 @@ class Stock {
 
   static addStock = async (req, res) => {
     try {
-      const yeni = new Stok(req.body);
-      console.log(yeni);
-      
+      const yeni = new Stok(req.body);      
       await yeni.save();
       res.json(yeni);
     } catch (error) {
