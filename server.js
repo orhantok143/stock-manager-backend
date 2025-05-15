@@ -7,7 +7,11 @@ require('dotenv').config();
 const app = express();
 
 // CORS middleware
-app.use(cors());
+app.use(cors({
+  origin: ["https://cari-stok-takip.netlify.app"],
+  credentials: true
+}));
+
 app.use(morgan("dev"))
 
 // Body parser middleware
